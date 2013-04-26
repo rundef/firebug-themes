@@ -1,0 +1,109 @@
+@text-color-1: #ffffff;
+@text-color-2: #52e820;
+@text-color-3: #5fc245;
+@text-color-4: #aad2ab;
+@text-color-5: #89d376;
+@text-color-6: #999999;
+@text-color-7: #666666;
+
+@bg-color-1: #333333;
+@bg-color-2: #222222;
+@bg-color-3: #1a1a1a;
+
+@border-color-1: #777777;
+@border-color-2: #111111;
+
+
+/* console */
+@console-border-bottom: #444444;
+@console-warning-outline: #ff9933;
+@console-warning-bg: #ffffad;
+
+
+/* style */
+@prop-name: #d7d7d7;
+@style-value: #aaaaaa;
+@font-value: green;
+@computed-header: #000000;
+
+
+
+
+/* layout */
+@margin-box: #ebe98b;
+@border-box: #e6e26a;
+@padding-box: #d7db22;
+@content-box: #b3d760;
+@layout-box-highlight: Highlight;
+@layout-label: red;
+
+
+
+/* dom */
+@var-string: #ff0000;
+@dom-color-1: yellow;
+
+
+/* html */
+@node-mutated: #ff4646;
+
+
+/* js */
+@line-number-color: #888888;
+
+
+
+
+@default-bg: #f6f6f6;
+@default-color: #060606;
+
+
+
+
+
+
+
+
+
+.panel-tab-box() {
+	background: linear-gradient(
+		to top,
+		rgba(0,0,0,0.7) 0%, rgba(0,0,0,1) 100%
+	) !important;
+}
+
+.panel-tab() {
+	color: #ffffff !important;
+}
+
+.panel-tab-selected() {
+	background: linear-gradient(
+		to bottom,
+		#AAD2AB 0%,
+		#89D376 33%,
+		#5FC245 66%,
+		#52E820 100%
+	) no-repeat 0 0 !important;
+
+	color: #000000 !important;
+}
+
+.panel-tab-hover() {
+	background: linear-gradient(
+		to bottom,
+		rgba(200,200,200,0.2),
+		rgba(200,200,200,0.4) 40%,
+		rgba(200,200,200,0) 40%,
+		rgba(200,200,200,0.1)
+	) no-repeat 0 0 !important;
+
+	color: #52E820 !important;
+}
+
+
+
+
+
+
+
+@import "layout.less";

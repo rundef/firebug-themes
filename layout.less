@@ -1,0 +1,574 @@
+@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+
+@-moz-document url-prefix(chrome://firebug/content)
+{
+	/* MISC */
+	.objectLink, .objectLink-sourceLink {
+		color: @text-color-1 !important;
+	}
+
+	.objectLink div, .objectLink-sourceLink div {
+		text-decoration: underline !important;
+	}
+
+	.panelNode-console, 
+	.panelNode-html, .panelNode-css, .panelNode-computed, .panelNode-layout, .panelNode-domSide,
+	.panelNode-stylesheet, .panelNode-selector,
+	.panelNode-script, .panelNode-watches, .panelNode-breakpoints, .panelNode-callstack, .panelNode-rainbow,
+	.panelNode-dom, 
+	.panelNode-net, 
+	.panelNode-cookies {
+		background-color: @bg-color-3 !important;
+		color: @text-color-4 !important;
+	}
+
+	.fbsearch-textbox {
+		background-color: @bg-color-1 !important;
+		-moz-border-colors: @border-color-1 !important;
+		color: @text-color-1 !important;
+	}
+
+	#fbContentBox {
+	}
+
+	.cssComputedHeader {
+		background-color: @computed-header !important;
+	}
+
+	.cssInheritHeader {
+		background-color: @border-color-1 !important;
+	}
+
+
+	/* Computed css property name / value */
+	.stylePropName { color: @text-color-1 !important; }
+	.stylePropValue { color: @style-value !important; }
+
+
+	/* DOM Objects */
+	.memberLabel:hover {
+		color: @text-color-1 !important;
+	}
+
+	.userFunctionLabel {
+		color: @text-color-4 !important;
+	}
+
+	.objectBox-number, .objectLink-styleRule, .objectLink-element, .objectLink-textNode {
+		color: @dom-color-1 !important;
+	}
+
+	.objectBox-string {
+		color: @var-string !important;
+	}
+
+	.objectLink-function, .objectBox-stackTrace, .objectLink-profile:hover {
+		color: @text-color-4 !important;
+	}
+
+	.objectBox-null, .objectBox-undefined, .objectBox-hint, .logRowHint {
+		color: @text-color-6 !important;
+	}
+
+	.objectLink-event, .objectLink-eventLog, .objectLink-regexp, .objectLink-object, .objectLink-Date {
+		color: @text-color-2 !important;
+	}
+
+	.objectLink-NamedNodeMap .nodeName, .objectLink-NamedNodeMap .objectEqual,
+	.objectLink-NamedNodeMap .arrayLeftBracket, .objectLink-NamedNodeMap .arrayRightBracket,
+	.objectLink-Attr .attrEqual, .objectLink-Attr .attrTitle {
+		color: @dom-color-1 !important;
+	}
+
+	.selectorTag {
+		color: @text-color-1 !important;
+	}
+
+	.selectorId {
+		color: @text-color-5 !important;
+	}
+
+	/* Element layout */
+	.layoutBox {
+		background-color: @text-color-1 !important;
+		border: 1px solid @text-color-5 !important;        
+	}
+
+	.layoutLabel.invisible {
+		opacity: 1.0 !important;
+	}
+
+	.layoutLabel {
+		color: @layout-label !important;
+	}   
+
+	.marginLayoutBox {
+		background-color: @margin-box !important;
+	}
+
+	.borderLayoutBox {
+		background-color: @border-box !important;
+	}
+
+	.paddingLayoutBox {
+		background-color: @padding-box !important;
+	}
+
+	.contentLayoutBox {
+		background-color: @content-box !important;
+	}
+
+	.layoutBox.editing, .layoutBox.highlighted {
+		background-color: @layout-box-highlight !important;
+	}
+
+	/* The space at the left of a table (Cookies, DOM, Net) */
+	.netDebugCol, .sourceLine {
+		background-color: @bg-color-1 !important;
+		border-color: @border-color-1 !important;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	/* Tabs (Console, HTML, CSS, Script ...) */    
+	.panelTabBox {
+		.panel-tab-box();
+	}
+
+	panelTab {
+		.panel-tab();
+	}
+
+	panelTab[selected="true"] {
+		.panel-tab-selected();
+	}
+
+	panelTab:not([selected="true"]):hover {
+		.panel-tab-hover();
+	}
+
+
+
+
+
+
+
+
+
+	/* Toolbars */
+	#fbToolbar {
+		padding: 0px !important;
+	}
+
+	#fbToolbarInner {
+		background-color: @bg-color-3 !important;
+		border: none !important;
+		border-bottom: 1px solid @text-color-7 !important;
+	}
+
+	.toolbar-text-button, .toolbar-text-menubutton {
+		color: @text-color-1 !important;
+	}
+
+	.panelStatusLabel {
+		color: @text-color-1 !important;
+	}
+
+	.panelStatusLabel:hover {
+		color: @text-color-1 !important;
+	}
+	
+	.toolbarbutton-text {
+		color: @text-color-2 !important;
+	}
+
+
+
+
+
+
+
+
+
+
+	/* Console */
+	.panelNode-console {
+		.logRow {
+			background-color: @bg-color-1 !important;
+			border-bottom: 1px solid @console-border-bottom !important;        
+		}
+
+		.logRow .objectLink-sourceLink {
+			background: @bg-color-1 !important;        
+		}
+
+		.logRow-command > .objectBox-text {
+			color: @text-color-2 !important;
+		}
+
+		.spyTitle {
+			color: @text-color-1 !important;
+		}
+	}
+
+	#fbCommandBox {
+		border-top: 1px solid @text-color-7 !important;
+		background-color: @bg-color-1 !important;
+		color: @text-color-1 !important;
+	}
+
+	#fbCommandLine {
+		color: @text-color-1 !important;
+	}
+
+	#fbCommandLineCompletion {
+		color: @text-color-7 !important;
+	}
+
+	#fbCommandArrow {
+		color: @text-color-7 !important;
+	}
+
+
+
+
+
+
+
+
+
+
+	/* HTML */
+	.docType {
+		color: @text-color-5 !important;
+	}
+
+	.nodeText {
+		color: #fff !important;
+	}
+
+	.nodeBox {
+
+	}
+
+	.nodeLabel, 
+	.nodeCloseLabel {
+		color: @text-color-3 !important;
+	}
+
+	.nodeTag {
+		color: @text-color-3 !important;
+	}
+
+	.nodeAttr {
+		color: @border-color-1 !important;
+	}
+
+	.nodeValue {
+		color: @text-color-2 !important;
+	}
+
+
+
+
+	.nodeBox.nodeHidden > .nodeLabel > .nodeLabelBox,
+	.nodeBox.nodeHidden > .nodeCloseLabel,
+	.nodeBox.nodeHidden > .nodeLabel > .nodeLabelBox > .nodeText {
+		color: @text-color-3 !important;
+	}
+
+	.nodeBox.nodeHidden > .nodeLabel > .nodeLabelBox > .nodeTag,
+	.nodeBox.nodeHidden > .nodeCloseLabel > .nodeCloseLabelBox > .nodeTag {
+		color: @text-color-3 !important;
+	}
+
+	.nodeBox.selected  > .nodeLabel > .nodeLabelBox > .nodeTag {
+		color: @text-color-2 !important;
+	}
+
+	.nodeBox.selected > .nodeLabel > .nodeLabelBox,     
+	.nodeBox.selected > .nodeLabel {
+		border-color: @bg-color-1 !important;
+		background-color: @bg-color-1 !important;
+		color: @text-color-1 !important;
+	}
+
+	.nodeBox.selected > .nodeLabel > .nodeLabelBox > .nodeAttr {
+		color: @text-color-2 !important;
+	}
+
+	.nodeBox.selected > .nodeLabel > .nodeLabelBox > .nodeAttr > .nodeValue {
+		color: @text-color-1 !important;
+	}
+
+
+
+	.nodeBox.mutated > .nodeLabel, .nodeAttr.mutated, .nodeValue.mutated, .nodeText.mutated, 
+	.nodeBox.mutated > .nodeText {
+		background-color: @node-mutated !important;
+	}
+
+
+
+
+
+
+
+
+
+
+	/* CSS */
+	.cssRule {
+		position: relative;
+		margin: 0;
+		margin: 3px 0 4px 0 !important;
+		padding: 3px 0 4px 6px !important;
+		color: @text-color-5 !important;
+	}
+
+	.cssPropName {
+		color: @prop-name !important;
+	}
+
+	.cssPropValue {
+		margin-left: 8px;
+		color: @text-color-2 !important;
+	}
+	.cssProp.disabledStyle {
+		color: @border-color-1 !important;
+	}
+
+	.cssProp.disabledStyle > .cssPropName,
+	.cssProp.disabledStyle > .cssPropValue {
+		color: inherit !important;
+	}
+
+	.useA11y .focusRow:focus, .useA11y .warning:focus {
+		outline: 2px solid @console-warning-outline !important;
+		background-color: @console-warning-bg !important;
+	}
+
+	.cssFontPropValue {
+		color: @font-value !important;
+	}
+
+
+
+
+	/* Script */
+	.panelNode-script {
+		.sourceRow.hovered {
+			background-color: @bg-color-1 !important;
+		}
+
+
+		/* Left side / Line numbers */
+		.sourceLine {
+			border-bottom: 1px solid @bg-color-1 !important;
+			border-right: 1px solid @border-color-2 !important;
+			padding: 0 4px 0 20px !important;
+			background-color: @bg-color-1 !important;
+			color: @line-number-color !important;
+		}
+	}
+
+
+
+
+
+
+
+
+
+	/* DOM */
+	.panelNode-dom .domTable, .panelNode-domSide .domTable {
+		background: @bg-color-3 !important;
+	}
+
+	.panelNode-dom .memberRow:hover, .panelNode-domSide .memberRow:hover {
+		background-color: @bg-color-1 !important;
+	}
+
+	.panelNode-dom .userLabel, .panelNode-domSide .userLabel {
+		color: @text-color-1 !important;
+	}
+
+	.panelNode-dom .domLabel, .panelNode-domSide .domLabel {
+		color: @text-color-1 !important;
+	}
+
+	.panelNode-dom .scopesRow, .panelNode-domSide .scopesRow {
+		background-color: @bg-color-1 !important;        
+	}
+
+	.panelNode-dom .watchEditCell, .panelNode-domSide .watchEditCell {
+		background-color: @bg-color-1 !important;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	/* Net */
+	.netHeaderCell {
+		background-color: @bg-color-1 !important;
+		color: @text-color-1 !important;
+	}       
+
+	.netTable .netRow {
+		background-color: @border-color-2 !important;
+		color: @text-color-1 !important;
+	}
+
+	.netTable .netCol {
+		border-top: none !important;
+	}
+
+	.netRow:hover .netCol > .netFullHrefLabel {
+		background-color: @border-color-2 !important;
+		color: @text-color-1 !important;
+	}
+
+	.netSummaryLabel {
+		color: @text-color-1 !important;
+	}    
+
+	.netSummaryRow .netCol {
+		background-color: @bg-color-1 !important;
+		border-bottom: 1px solid !important;
+		-moz-border-bottom-colors: @text-color-7 @text-color-6 !important;
+		border-top: none !important;
+	}
+
+	.netSummaryRow .netTimeBar, .netSummaryRow .netCacheSizeLabel {
+		background-color: @bg-color-1 !important;
+	}
+
+	.netHeaderCell {
+		border-color: @border-color-1 !important;
+	}
+
+	.netHeaderCellBox {
+		border-color: @border-color-1 !important;
+	}
+
+
+	.netCol {
+		border-color: @border-color-1 !important;
+	}
+
+	.netInfoCol {
+		border-top: none !important;
+	}
+
+	/* HTTP Requests in the console */
+	.netInfoCol, .netInfoTab {
+		background-color: @bg-color-1 !important;
+		color: @text-color-1 !important;        
+	}
+	.netInfoText {
+		background-color: @bg-color-1 !important;
+	}
+
+
+	.panelNode-net .netInfoCol, .panelNode-net .netInfoTab {
+		background-color: @bg-color-1 !important;
+		color: @text-color-1 !important;        
+	}
+
+	.netInfoTab[selected="true"] {
+		border-color: @border-color-1 !important;
+		color: @text-color-3 !important;
+	}
+
+	.panelNode-net .netInfoText {
+		background-color: @bg-color-1 !important;
+	}
+
+	.netHeadersViewSource {
+		color: @text-color-1 !important;
+		text-decoration: underline !important;
+	}
+
+	.netInfoHeadersGroup {
+		color: @text-color-1 !important;
+	}
+
+
+
+
+
+
+
+
+
+
+	/* Cookies + Cookies in the HTML panel */
+	.panelNode {
+		.cookieHeaderCell {
+			background-color: @bg-color-1 !important;
+			color: @text-color-1 !important;
+		}
+
+		.cookieHeaderCellBox {
+			border-color: @border-color-1 !important;
+		}
+
+		.cookieDebugCol {
+			background-color: @bg-color-1 !important;
+			border-color: @border-color-1 !important;
+		}
+
+		.cookieRow {
+			background-color: @border-color-2 !important;
+			color: @text-color-1 !important;        
+		}
+
+		.cookieRow:hover {
+			background-color: @bg-color-1 !important;
+			color: @text-color-1 !important;
+		}
+
+		.cookieCol {
+			border-color: @border-color-1 !important;
+		}
+
+		.cookieNameLabel:hover {
+			color: @text-color-1 !important;
+		}
+
+		.cookieDomainLabel {
+			color: @text-color-1 !important;
+		}
+
+		.cookieInfoTab, .cookieInfoCol {
+			background-color: @bg-color-1 !important;
+			color: @text-color-1 !important;   
+		}
+
+		.cookieInfoCol {
+			border: none !important;
+		}
+
+		.cookieInfoText {
+			background-color: @bg-color-1 !important;        
+		}
+	}
+}
