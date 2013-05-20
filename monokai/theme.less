@@ -1,0 +1,113 @@
+@text-color-1: #f8f8f2;
+@text-color-2: #ccdf32;
+@text-color-3: #1e90ff;
+@text-color-4: #d9e577;
+@text-color-5: #66ccb3;
+@text-color-6: #7fb347;
+@text-color-7: #bed6ff;
+
+@text-color-toolbar: #79abff;
+
+
+
+@bg-color-1: #141612;
+@bg-color-2: #272822;
+@bg-color-3: #272822;
+
+@border-color-1: #777777;
+@border-color-2: #111111;
+
+
+/* console */
+@console-border-bottom: #444444;
+@console-warning-outline: #ff9933;
+@console-warning-bg: #ffffad;
+
+
+/* style */
+@prop-name: #d197d9;
+@style-value: #7fb347;
+@font-value: #efb571;
+@computed-header: #000000;
+
+
+
+
+/* layout */
+@margin-box: #ebe98b;
+@border-box: #e6e26a;
+@padding-box: #d7db22;
+@content-box: #b3d760;
+@layout-box-highlight: Highlight;
+@layout-label: #d25252;
+
+
+
+/* dom */
+@var-string: #ccdf32;
+@dom-color-1: #66ccb3;
+
+
+/* html */
+@node-mutated: #ff4646;
+
+
+/* js */
+@line-number-color: #888888;
+
+
+
+
+@default-bg: #f6f6f6;
+@default-color: #060606;
+
+
+
+
+
+
+
+
+
+.panel-tab-box() {
+	background: linear-gradient(
+		to top,
+		rgba(39,40,34,0.7) 0%, rgba(39,40,34,1) 100%
+	) !important;
+}
+
+.panel-tab() {
+	color: #ffffff !important;
+}
+
+.panel-tab-selected() {
+	background: linear-gradient(
+		to bottom,
+		#bed6ff 0%,
+		#9EC2FF 33%,
+		#89B5FE 66%,
+		#79abff 100%
+	) no-repeat 0 0 !important;
+
+	color: #ffffff !important;
+}
+
+.panel-tab-hover() {
+	background: linear-gradient(
+		to bottom,
+		rgba(200,200,200,0.2),
+		rgba(200,200,200,0.4) 40%,
+		rgba(200,200,200,0) 40%,
+		rgba(200,200,200,0.1)
+	) no-repeat 0 0 !important;
+
+	color: #ccdf32 !important;
+}
+
+
+
+
+
+
+
+@import "layout.less";

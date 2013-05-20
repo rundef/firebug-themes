@@ -1,0 +1,430 @@
+/* console */
+/* style */
+/* layout */
+/* dom */
+/* html */
+/* js */
+@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@-moz-document url-prefix(chrome://firebug/content) {
+  /* MISC */
+  .objectLink,
+  .objectLink-sourceLink {
+    color: #f8f8f2 !important;
+  }
+  .objectLink div,
+  .objectLink-sourceLink div {
+    text-decoration: underline !important;
+  }
+  .panelNode-console,
+  .panelNode-html,
+  .panelNode-css,
+  .panelNode-computed,
+  .panelNode-layout,
+  .panelNode-domSide,
+  .panelNode-stylesheet,
+  .panelNode-selector,
+  .panelNode-script,
+  .panelNode-watches,
+  .panelNode-breakpoints,
+  .panelNode-callstack,
+  .panelNode-rainbow,
+  .panelNode-dom,
+  .panelNode-net,
+  .panelNode-cookies {
+    background-color: #272822 !important;
+    color: #d9e577 !important;
+  }
+  .fbsearch-textbox {
+    background-color: #141612 !important;
+    -moz-border-colors: #777777 !important;
+    color: #f8f8f2 !important;
+  }
+  .cssComputedHeader {
+    background-color: #000000 !important;
+  }
+  .cssInheritHeader {
+    background-color: #777777 !important;
+  }
+  /* Computed css property name / value */
+  .stylePropName {
+    color: #f8f8f2 !important;
+  }
+  .stylePropValue {
+    color: #7fb347 !important;
+  }
+  /* DOM Objects */
+  .memberLabel:hover {
+    color: #f8f8f2 !important;
+  }
+  .userFunctionLabel {
+    color: #d9e577 !important;
+  }
+  .objectBox-number,
+  .objectLink-styleRule,
+  .objectLink-element,
+  .objectLink-textNode {
+    color: #66ccb3 !important;
+  }
+  .objectBox-string {
+    color: #ccdf32 !important;
+  }
+  .objectLink-function,
+  .objectBox-stackTrace,
+  .objectLink-profile:hover {
+    color: #d9e577 !important;
+  }
+  .objectBox-null,
+  .objectBox-undefined,
+  .objectBox-hint,
+  .logRowHint {
+    color: #7fb347 !important;
+  }
+  .objectLink-event,
+  .objectLink-eventLog,
+  .objectLink-regexp,
+  .objectLink-object,
+  .objectLink-Date {
+    color: #ccdf32 !important;
+  }
+  .objectLink-NamedNodeMap .nodeName,
+  .objectLink-NamedNodeMap .objectEqual,
+  .objectLink-NamedNodeMap .arrayLeftBracket,
+  .objectLink-NamedNodeMap .arrayRightBracket,
+  .objectLink-Attr .attrEqual,
+  .objectLink-Attr .attrTitle {
+    color: #66ccb3 !important;
+  }
+  .selectorTag {
+    color: #f8f8f2 !important;
+  }
+  .selectorId {
+    color: #66ccb3 !important;
+  }
+  /* Element layout */
+  .layoutBox {
+    background-color: #f8f8f2 !important;
+    border: 1px solid #66ccb3 !important;
+  }
+  .layoutLabel.invisible {
+    opacity: 1.0 !important;
+  }
+  .layoutLabel {
+    color: #d25252 !important;
+  }
+  .marginLayoutBox {
+    background-color: #ebe98b !important;
+  }
+  .borderLayoutBox {
+    background-color: #e6e26a !important;
+  }
+  .paddingLayoutBox {
+    background-color: #d7db22 !important;
+  }
+  .contentLayoutBox {
+    background-color: #b3d760 !important;
+  }
+  .layoutBox.editing,
+  .layoutBox.highlighted {
+    background-color: Highlight !important;
+  }
+  /* The space at the left of a table (Cookies, DOM, Net) */
+  .netDebugCol,
+  .sourceLine {
+    background-color: #141612 !important;
+    border-color: #777777 !important;
+  }
+  /* Tabs (Console, HTML, CSS, Script ...) */.panelTabBox {
+    background: linear-gradient(to top, rgba(39, 40, 34, 0.7) 0%, #272822 100%) !important;
+  }
+  panelTab {
+    color: #ffffff !important;
+  }
+  panelTab[selected="true"] {
+    background: linear-gradient(to bottom, #bed6ff 0%, #9ec2ff 33%, #89b5fe 66%, #79abff 100%) no-repeat 0 0 !important;
+    color: #ffffff !important;
+  }
+  panelTab:not([selected="true"]):hover {
+    background: linear-gradient(to bottom, rgba(200, 200, 200, 0.2), rgba(200, 200, 200, 0.4) 40%, rgba(200, 200, 200, 0) 40%, rgba(200, 200, 200, 0.1)) no-repeat 0 0 !important;
+    color: #ccdf32 !important;
+  }
+  /* Toolbars */
+  #fbToolbar {
+    padding: 0px !important;
+  }
+  #fbToolbarInner {
+    background-color: #272822 !important;
+    border: none !important;
+    border-bottom: 1px solid #bed6ff !important;
+  }
+  .toolbar-text-button,
+  .toolbar-text-menubutton {
+    color: #f8f8f2 !important;
+  }
+  .panelStatusLabel {
+    color: #f8f8f2 !important;
+  }
+  .panelStatusLabel:hover {
+    color: #f8f8f2 !important;
+  }
+  .toolbarbutton-text {
+    color: #79abff !important;
+  }
+  /* Console */
+  .panelNode-console .logRow {
+    background-color: #141612 !important;
+    border-bottom: 1px solid #444444 !important;
+  }
+  .panelNode-console .logRow .objectLink-sourceLink {
+    background: #141612 !important;
+  }
+  .panelNode-console .logRow-command > .objectBox-text {
+    color: #ccdf32 !important;
+  }
+  .panelNode-console .spyTitle {
+    color: #f8f8f2 !important;
+  }
+  #fbCommandBox {
+    border-top: 1px solid #bed6ff !important;
+    background-color: #141612 !important;
+    color: #f8f8f2 !important;
+  }
+  #fbCommandLine {
+    color: #f8f8f2 !important;
+  }
+  #fbCommandLineCompletion {
+    color: #bed6ff !important;
+  }
+  #fbCommandArrow {
+    color: #bed6ff !important;
+  }
+  /* HTML */
+  .docType {
+    color: #66ccb3 !important;
+  }
+  .nodeText {
+    color: #fff !important;
+  }
+  .nodeLabel,
+  .nodeCloseLabel {
+    color: #1e90ff !important;
+  }
+  .nodeTag {
+    color: #1e90ff !important;
+  }
+  .nodeAttr {
+    color: #777777 !important;
+  }
+  .nodeValue {
+    color: #ccdf32 !important;
+  }
+  .nodeBox.nodeHidden > .nodeLabel > .nodeLabelBox,
+  .nodeBox.nodeHidden > .nodeCloseLabel,
+  .nodeBox.nodeHidden > .nodeLabel > .nodeLabelBox > .nodeText {
+    color: #1e90ff !important;
+  }
+  .nodeBox.nodeHidden > .nodeLabel > .nodeLabelBox > .nodeTag,
+  .nodeBox.nodeHidden > .nodeCloseLabel > .nodeCloseLabelBox > .nodeTag {
+    color: #1e90ff !important;
+  }
+  .nodeBox.selected > .nodeLabel > .nodeLabelBox > .nodeTag {
+    color: #ccdf32 !important;
+  }
+  .nodeBox.selected > .nodeLabel > .nodeLabelBox,
+  .nodeBox.selected > .nodeLabel {
+    border-color: #141612 !important;
+    background-color: #141612 !important;
+    color: #f8f8f2 !important;
+  }
+  .nodeBox.selected > .nodeLabel > .nodeLabelBox > .nodeAttr {
+    color: #ccdf32 !important;
+  }
+  .nodeBox.selected > .nodeLabel > .nodeLabelBox > .nodeAttr > .nodeValue {
+    color: #f8f8f2 !important;
+  }
+  .nodeBox.mutated > .nodeLabel,
+  .nodeAttr.mutated,
+  .nodeValue.mutated,
+  .nodeText.mutated,
+  .nodeBox.mutated > .nodeText {
+    background-color: #ff4646 !important;
+  }
+  /* CSS */
+  .cssRule {
+    position: relative;
+    margin: 0;
+    margin: 3px 0 4px 0 !important;
+    padding: 3px 0 4px 6px !important;
+    color: #66ccb3 !important;
+  }
+  .cssPropName {
+    color: #d197d9 !important;
+  }
+  .cssPropValue {
+    margin-left: 8px;
+    color: #ccdf32 !important;
+  }
+  .cssProp.disabledStyle {
+    color: #777777 !important;
+  }
+  .cssProp.disabledStyle > .cssPropName,
+  .cssProp.disabledStyle > .cssPropValue {
+    color: inherit !important;
+  }
+  .useA11y .focusRow:focus,
+  .useA11y .warning:focus {
+    outline: 2px solid #ff9933 !important;
+    background-color: #ffffad !important;
+  }
+  .cssFontPropValue {
+    color: #efb571 !important;
+  }
+  /* Script */
+  .panelNode-script {
+    /* Left side / Line numbers */
+  
+  }
+  .panelNode-script .sourceRow.hovered {
+    background-color: #141612 !important;
+  }
+  .panelNode-script .sourceLine {
+    border-bottom: 1px solid #141612 !important;
+    border-right: 1px solid #111111 !important;
+    padding: 0 4px 0 20px !important;
+    background-color: #141612 !important;
+    color: #888888 !important;
+  }
+  /* DOM */
+  .panelNode-dom .domTable,
+  .panelNode-domSide .domTable {
+    background: #272822 !important;
+  }
+  .panelNode-dom .memberRow:hover,
+  .panelNode-domSide .memberRow:hover {
+    background-color: #141612 !important;
+  }
+  .panelNode-dom .userLabel,
+  .panelNode-domSide .userLabel {
+    color: #f8f8f2 !important;
+  }
+  .panelNode-dom .domLabel,
+  .panelNode-domSide .domLabel {
+    color: #f8f8f2 !important;
+  }
+  .panelNode-dom .scopesRow,
+  .panelNode-domSide .scopesRow {
+    background-color: #141612 !important;
+  }
+  .panelNode-dom .watchEditCell,
+  .panelNode-domSide .watchEditCell {
+    background-color: #141612 !important;
+  }
+  /* Net */
+  .netHeaderCell {
+    background-color: #141612 !important;
+    color: #f8f8f2 !important;
+  }
+  .netTable .netRow {
+    background-color: #111111 !important;
+    color: #f8f8f2 !important;
+  }
+  .netTable .netCol {
+    border-top: none !important;
+  }
+  .netRow:hover .netCol > .netFullHrefLabel {
+    background-color: #111111 !important;
+    color: #f8f8f2 !important;
+  }
+  .netSummaryLabel {
+    color: #f8f8f2 !important;
+  }
+  .netSummaryRow .netCol {
+    background-color: #141612 !important;
+    border-bottom: 1px solid !important;
+    -moz-border-bottom-colors: #bed6ff #7fb347 !important;
+    border-top: none !important;
+  }
+  .netSummaryRow .netTimeBar,
+  .netSummaryRow .netCacheSizeLabel {
+    background-color: #141612 !important;
+  }
+  .netHeaderCell {
+    border-color: #777777 !important;
+  }
+  .netHeaderCellBox {
+    border-color: #777777 !important;
+  }
+  .netCol {
+    border-color: #777777 !important;
+  }
+  .netInfoCol {
+    border-top: none !important;
+  }
+  /* HTTP Requests in the console */
+  .netInfoCol,
+  .netInfoTab {
+    background-color: #141612 !important;
+    color: #f8f8f2 !important;
+  }
+  .netInfoText {
+    background-color: #141612 !important;
+  }
+  .panelNode-net .netInfoCol,
+  .panelNode-net .netInfoTab {
+    background-color: #141612 !important;
+    color: #f8f8f2 !important;
+  }
+  .netInfoTab[selected="true"] {
+    border-color: #777777 !important;
+    color: #1e90ff !important;
+  }
+  .panelNode-net .netInfoText {
+    background-color: #141612 !important;
+  }
+  .netHeadersViewSource {
+    color: #f8f8f2 !important;
+    text-decoration: underline !important;
+  }
+  .netInfoHeadersGroup {
+    color: #f8f8f2 !important;
+  }
+  /* Cookies + Cookies in the HTML panel */
+  .panelNode .cookieHeaderCell {
+    background-color: #141612 !important;
+    color: #f8f8f2 !important;
+  }
+  .panelNode .cookieHeaderCellBox {
+    border-color: #777777 !important;
+  }
+  .panelNode .cookieDebugCol {
+    background-color: #141612 !important;
+    border-color: #777777 !important;
+  }
+  .panelNode .cookieRow {
+    background-color: #111111 !important;
+    color: #f8f8f2 !important;
+  }
+  .panelNode .cookieRow:hover {
+    background-color: #141612 !important;
+    color: #f8f8f2 !important;
+  }
+  .panelNode .cookieCol {
+    border-color: #777777 !important;
+  }
+  .panelNode .cookieNameLabel:hover {
+    color: #f8f8f2 !important;
+  }
+  .panelNode .cookieDomainLabel {
+    color: #f8f8f2 !important;
+  }
+  .panelNode .cookieInfoTab,
+  .panelNode .cookieInfoCol {
+    background-color: #141612 !important;
+    color: #f8f8f2 !important;
+  }
+  .panelNode .cookieInfoCol {
+    border: none !important;
+  }
+  .panelNode .cookieInfoText {
+    background-color: #141612 !important;
+  }
+}
